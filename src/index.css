@@ -1,70 +1,74 @@
-
-:root{
-  --primary-brown:#ba5d32;
-  --primary-brown-90:#bf5d2c;
-  --primary-violet:#6a4d67;
-  --primary-violet-80:#617d98;
-  --primary-violet-60:#617d98;
-  --img-bg-clr:#bcccdc;
-  --shadow:0 5px 15px rgba(0,0, 0, .4);
+:root {
+  --primary-brown: #ba5d32;
+  --primary-brown-90: #bf5d2c;
+  --primary-violet: #6a4d67;
+  --primary-violet-80: #617d98;
+  --primary-violet-60: #617d98;
+  --img-bg-clr: #bcccdc;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
-*,::after,::before{
+
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
 }
-body{
+
+body {
   font-family: monospace;
-  line-height :1.7rem;
+  line-height: 1.7rem;
   word-spacing: 1rem;
 }
-.container{
+
+.container {
   width: 90vw;
   max-width: 660px;
   margin: 3rem auto;
 }
-/* set top margin */
-.head{
+
+.head {
   margin: 0 0 1.5rem 0;
 }
-/* title */
-.head h1{
-  line-height :2.2rem;
+
+.head h1 {
+  line-height: 2.2rem;
   font-size: 2.6rem;
   text-align: center;
-  word-spacing: .02rem;
-}
-.head span{
-  color:var(--primary-brown);
+  word-spacing: 0.02rem;
 }
 
-/* reviewer container */
-.review-container{
+.head span {
+  color: var(--primary-brown);
+}
+
+.review-container {
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-height: 800px;
-  height:460px;
+  min-height: 460px;
 }
-/* image Container */
-.img-container{
+
+.img-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 1rem 0;
 }
-.img-container::before{
-  content: '';
+
+.img-container::before {
+  content: "";
   width: 160px;
   height: 160px;
-  box-shadow:var(--shadow);
+  box-shadow: var(--shadow);
   background-color: var(--img-bg-clr);
   position: absolute;
   border-radius: 50%;
 }
-/* image sizing */
-img{
+
+img {
   width: 150px;
   height: 150px;
   object-fit: cover;
@@ -72,44 +76,49 @@ img{
   z-index: 1;
   border-radius: 50%;
 }
-/* reviewer profile */
-.person-name{
+
+.person-name {
   font-size: 1.4rem;
   color: var(--primary-brown-90);
   margin-top: 1.2rem;
   text-transform: capitalize;
 }
-.person-role{
+
+.person-role {
   font-size: 1rem;
   font-weight: 500;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   color: var(--primary-violet);
 }
-.person-info{
+
+.person-info {
   font-size: 1rem;
   color: var(--primary-violet-60);
 }
-article{
+
+article {
   text-align: center;
-  transition: all .1s linear;
+  transition: all 0.1s linear;
 }
 
-/* animate */
-.activeSlide{
+.activeSlide {
   opacity: 1;
   transform: translateX(0);
 }
-.lastSlide{
+
+.lastSlide {
   position: absolute;
   opacity: 0;
   transform: translateX(-100%);
 }
-.nextSlide{
+
+.nextSlide {
   position: absolute;
   opacity: 0;
   transform: translateX(100%);
 }
-button{
+
+button {
   width: 40px;
   height: 30px;
   border-radius: 7px;
@@ -127,37 +136,38 @@ button{
 }
 
 /* for smaller Device */
-@media screen and (max-width:680px){
-  body{
+@media screen and (max-width: 680px) {
+  body {
     font-family: monospace;
-    line-height :1rem;
+    line-height: 1rem;
     word-spacing: 1rem;
   }
- .review-container{
+
+  .review-container {
     position: relative;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height: 800px;
-    height: 460px;
   }
-  .img-container{
+
+  .img-container {
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
-  .img-container::before{
-    content: '';
+
+  .img-container::before {
+    content: "";
     width: 150px;
     height: 150px;
-    box-shadow:var(--shadow);
+    box-shadow: var(--shadow);
     background-color: var(--img-bg-clr);
     position: absolute;
     border-radius: 50%;
   }
-  img{
+
+  img {
     width: 140px;
     height: 140px;
     object-fit: cover;
@@ -165,23 +175,27 @@ button{
     z-index: 1;
     border-radius: 50%;
   }
-  .person-name{
+
+  .person-name {
     font-size: 1.3rem;
     color: var(--primary-brown-90);
     margin-top: 1.1rem;
   }
-  .person-role{
+
+  .person-role {
     font-size: 1rem;
     font-weight: 500;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
     color: var(--primary-violet);
   }
-  .person-info{
+
+  .person-info {
     font-size: 1rem;
     color: var(--primary-violet-60);
     margin-top: 1rem;
   }
-  button{
+
+  button {
     width: 40px;
     border-radius: 7px;
     font-size: 1rem;
@@ -196,7 +210,4 @@ button{
     flex-grow: 0;
     cursor: pointer;
   }
-
 }
-
-
